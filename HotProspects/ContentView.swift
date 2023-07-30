@@ -6,16 +6,31 @@ struct ContentView: View {
     @State private var isLoading = true
 
     var body: some View {
-        VStack {
-            if isLoading {
-                Text("Loading...") // ローディング中のメッセージ
-            } else {
-                Text(output) // 実際の結果を表示するメッセージ
+        ZStack {
+            
+            Image("example")
+                .interpolation(.none)
+                .resizable()
+                .scaledToFit()
+                .frame(maxHeight: .infinity)
+                .background(.black)
+                .ignoresSafeArea()
+            
+            VStack {
+                if isLoading {
+                    Text("Loading...")
+                        .foregroundColor(.white)
+                    // ローディング中のメッセージ
+                } else {
+                    Text(output)
+                        .foregroundColor(.white)
+                    // 実際の結果を表示するメッセージ
+                }
             }
-        }
-        .task {
-            await fetchReadings()
-            isLoading = false // 非同期処理が終わったらローディング中のメッセージを非表示にする
+            .task {
+                await fetchReadings()
+                isLoading = false // 非同期処理が終わったらローディング中のメッセージを非表示にする
+            }
         }
     }
     
