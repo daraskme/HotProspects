@@ -11,6 +11,10 @@
 		72B74CC82A751B0E00CD7A7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B74CC72A751B0E00CD7A7D /* ContentView.swift */; };
 		72B74CCA2A751B1100CD7A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B74CC92A751B1100CD7A7D /* Assets.xcassets */; };
 		72B74CCD2A751B1100CD7A7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B74CCC2A751B1100CD7A7D /* Preview Assets.xcassets */; };
+		B62641302A7A6273005DAC92 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B626412F2A7A6273005DAC92 /* MeView.swift */; };
+		B62641332A7A6495005DAC92 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B62641322A7A6495005DAC92 /* CodeScanner */; };
+		B62641352A7A64E3005DAC92 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62641342A7A64E3005DAC92 /* ProspectsView.swift */; };
+		B62641372A7A68AC005DAC92 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62641362A7A68AC005DAC92 /* Prospect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		72B74CC72A751B0E00CD7A7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72B74CC92A751B1100CD7A7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B74CCC2A751B1100CD7A7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B626412F2A7A6273005DAC92 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		B62641342A7A64E3005DAC92 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		B62641362A7A68AC005DAC92 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62641332A7A6495005DAC92 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,9 @@
 			children = (
 				72B74CC52A751B0E00CD7A7D /* HotProspectsApp.swift */,
 				72B74CC72A751B0E00CD7A7D /* ContentView.swift */,
+				B626412F2A7A6273005DAC92 /* MeView.swift */,
+				B62641342A7A64E3005DAC92 /* ProspectsView.swift */,
+				B62641362A7A68AC005DAC92 /* Prospect.swift */,
 				72B74CC92A751B1100CD7A7D /* Assets.xcassets */,
 				72B74CCB2A751B1100CD7A7D /* Preview Content */,
 			);
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = HotProspects;
+			packageProductDependencies = (
+				B62641322A7A6495005DAC92 /* CodeScanner */,
+			);
 			productName = HotProspects;
 			productReference = 72B74CC22A751B0E00CD7A7D /* HotProspects.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 72B74CB92A751B0E00CD7A7D;
+			packageReferences = (
+				B62641312A7A6495005DAC92 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 72B74CC32A751B0E00CD7A7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62641352A7A64E3005DAC92 /* ProspectsView.swift in Sources */,
+				B62641372A7A68AC005DAC92 /* Prospect.swift in Sources */,
+				B62641302A7A6273005DAC92 /* MeView.swift in Sources */,
 				72B74CC82A751B0E00CD7A7D /* ContentView.swift in Sources */,
 				72B74CC62A751B0E00CD7A7D /* HotProspectsApp.swift in Sources */,
 			);
@@ -275,6 +295,7 @@
 				DEVELOPMENT_TEAM = X3DVX6NQAA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QRcode.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +325,7 @@
 				DEVELOPMENT_TEAM = X3DVX6NQAA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QRcode.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B62641312A7A6495005DAC92 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B62641322A7A6495005DAC92 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B62641312A7A6495005DAC92 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72B74CBA2A751B0E00CD7A7D /* Project object */;
 }
